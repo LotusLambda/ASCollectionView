@@ -29,7 +29,7 @@ open class ASCollectionViewDelegate: NSObject, UICollectionViewDelegate, UIColle
 		.scrollableAxes
 	}
 
-	public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
+	open func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
 	{
 		coordinator?.collectionView(collectionView, willDisplay: cell, forItemAt: indexPath)
 	}
@@ -138,7 +138,7 @@ extension ASCollectionViewDelegate: UICollectionViewDragDelegate, UICollectionVi
 		}
 	}
 
-	public func scrollViewDidScroll(_ scrollView: UIScrollView)
+	open func scrollViewDidScroll(_ scrollView: UIScrollView)
 	{
 		self.coordinator?.scrollViewDidScroll(scrollView)
 	}
